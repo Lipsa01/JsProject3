@@ -1,0 +1,35 @@
+<!--digital clock-->
+
+<html>
+    <head>
+        <title>digital clock</title>
+    </head>
+
+    <body>
+        <div class="banner"><span>Your local time</span></div>
+        <div id="clock"></div>
+    </body>
+
+    <style>
+        body{
+            background-color: #212121;
+            color: white;
+        }
+        #clock{
+            background-color: #134251;
+        }
+    </style>
+
+    <script>
+        const clock = document.getElementById('clock')
+        //const clock = document.querySelector('#clock')
+
+        
+        setInterval(function(){
+            let date = new Date()
+            //console.log(date.toLocaleTimeString());
+            clock.innerHTML = date.toLocaleTimeString()
+        },1000) //runs continuously , in ms
+
+    </script>
+</html>
